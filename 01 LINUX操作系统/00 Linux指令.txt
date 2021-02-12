@@ -16,8 +16,18 @@
     安装软件的三种方法
         1. 下载离线安装包——dpkg、rpm
         2. 直接在线安装——apt、yum
-        3. 下载源代码，然后编译安装下载.tgz源文件，
-            是一个压缩包，相当于Windows里的zip或rar
+        3. 下载源代码，然后编译安装下载.tgz源文件，是一个压缩包，相当于Windows里的zip或rar
+            1. 从官网下载源码   wget
+            2. 解压源代码,进入文件夹
+            3. 执行./configure --prefix=url进行配置
+                --prefix用来指定安装路径
+                配置过程中可能会提醒需要安装第三方依赖包,命令手动安装依赖包
+                安装完依赖,再次执行./configure
+            4. configure命令执行成功以后, 会生成一个新的Makefile文件
+            5. 执行命令进行编译安装 sudo make && sudo make install
+            5. 启动nginx
+                cd/usr/local/nginx/sbin目录
+                执行nginx文件
 
     CentOS软件安装的相关命令
         rpm：(输入rpm 提示可用命令)
@@ -26,6 +36,7 @@
             rpm -qa ——列出电脑上安装的所有包
 
         yum：
+            yum安装时,配置文件在/etc/name/name.conf;HTML文件在/usr/share/name.....
             yum install <包名> ——安装（可以直接从网上下载）
             yum search <包名> ——搜索软件包
             yum remove <包名> ——删除
@@ -237,4 +248,74 @@ Linux里的配置文件介绍
     chowm <用户名> <文件名>: 修改所属者
 
 压缩解压命令
-    a
+    常见压缩格式 .zip .tgz .tbz
+    
+    zip/unzip压缩(可以压缩文件夹)
+        zip <name>.zip <原文件>：压缩
+        unzip <name>.zip: 解压缩
+        
+    gzip/gunzip
+        会把原来文件替换成<原文件名>.gz
+        gzip <name>     gunzip <name>
+        -k选项: 可以保留原文件gzip -k <name>
+        -r选项: 递归压缩文件夹时,分别将内部文件逐个压缩
+
+    bzip2
+        用法可gzip基本一致
+        不能压缩文件夹
+    
+    tar: 打包(不会压缩,反而会变大)
+        三个模式(这三个选项不能共存)
+            -c: 打包
+            -x: 拆包
+            -t: 不拆包,查看内容
+        
+        -f:指定文件
+        -v: 查看过程
+        -z: 使用gzip压缩/解压
+        -j: 使用bzip2压缩/解压
+
+        tar -zcvf test ==> 将test文件压缩成 test.tgz文件
+
+nginx的安装和配置
+    使用yum在线安装
+        步骤
+            1. sudo yum install nginx
+            2. sudo systemctl start nginx
+            3. ps -aux|grep nginx
+            4. 客户就可以在浏览器里通过IP地址直接访问到服务器
+        配置文件存放路径
+            1. whereis nginx: 查找和nginx相关的文件
+            2. 在/etc/nginx/nginx.conf里存放配置信息
+            3. 在这个配置文件里,有两个配置很重要
+                listen 80 default_server ==> 设置监听的端口
+                root /usr/share/nginx/html ==> 静态页面存放的路径
+    使用源码安装
+        步骤
+            1. 使用wget下载源码
+            2. 使用tar命令解压
+            3. 进入解压后的问仅仅, 执行 ./configure --prefix = /usr/local/nginx
+               开始配置nginx, --prefix指定nginx的安装目录
+            4. 在执行configure文件时可能会报错,此时需要安装第三方依赖包
+               安装完依赖以后,重新执行configure文件
+            5. 此时会生成一个Makefile文件
+            6. 执行sudo make命令, 然后再执行sudo make install
+            7. 进入到 /usr/local/nginx/sbin目录, 执行sudo ./nginx 启动nginx
+        配置文件存在路径: 都在 /usr/local/nginx这个文件夹下
+
+安装python3
+    云服务器
+        直接yum install python3
+
+    标准CentOS
+        使用EPEL安装
+            sudo yum install epel-release 安装epel扩展软件包
+            yum install python3
+
+        使用源码安装
+
+安装虚拟环境
+    1. 执行sudo pip3 install virtualenv
+    2. 再执行sudo pip3 install virtualenvwrapper
+    3. 使用vim编辑 ~/.bashrc文件, 在文件的后边添加
+       export VIRTUALEN 
