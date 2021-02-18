@@ -160,7 +160,10 @@ mycli的使用
         str char(1)
     ) charset=utf8mb4 collation=utf8mb4_general_ci;  # ci不区分大小写，cs区分，bin二进制
     
-
+注释
+    -- 单行注释
+    /* 多行注释 */
+    # mysql独有单行注释
 
 
 
