@@ -1,0 +1,50 @@
+参阅 http://redisdoc.com
+
+字符串操作
+    set <key> <value>
+    get <key>
+    mset :多个
+    mget :多个
+    ttl <key> :过期时间
+    keys * :所有key
+    strlen <key> :长度
+    incr <key> : 自增
+    decr : 自减
+
+哈希表
+    hset
+    hget
+    hexists dog color : 判断属性是否存在
+    hdel dog 属性...: 删除属性
+    hlen dog: 属性个数
+    hstrkeb dog name: 属性长度
+    hkeys: 所有属性
+    hvals: 所有值
+    hgetall
+
+列表
+    lpush <表名> <值>..... :左放
+    rpush
+    lpop : 左拿出一个
+    rpop
+    lset name 0 rose: 左第0个修改为rose
+    rset
+    lrange <表名> 0 -1 : 全部值
+    llen : 值的个数
+    lindx names 3 : 查询下标的值
+
+集合
+    sadd <name> <value>....
+    sismember <name> <value>；判断是否有
+    srandmember <name> n: 随机取n个值
+    smembers <name> :所有
+    sinter <name> <name2>: 交集
+    sunion <name> <name2> : 并集
+    sdiff <name> <name2> : 交集的补集
+
+有序集合
+    zadd key <score> <member>...
+    zrange <name> 0 -1: 正序
+    zrank rank <member>
+    zrevrang 0 -1 [withscores]: 倒序
+    zincrby key n <member>: 加n分
