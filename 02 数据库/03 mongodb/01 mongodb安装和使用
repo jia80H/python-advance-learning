@@ -1,0 +1,6 @@
+安装
+    yum
+        服务器yum install mongodb-server -y
+        客户端yum install mongodb -y
+        修改配置项 fork = true
+        配置项sudo mongod -f /etc/mongod.conf
