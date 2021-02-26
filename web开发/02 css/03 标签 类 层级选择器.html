@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 标签选择器 */
+        p{
+            color: coral;
+        }
+        /* 类选择器 */
+        .lvse{
+            color: rgb(51, 255, 0);
+        }
+        /* 层级选择器 */
+        div div{
+            color:rosybrown;
+        }
+        div .box2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标签选择器 -->
+    <p>hello</p>
+    <!-- 类选择器 -->
+    <test class="lvse">你好</test>
+    <!-- 层级选择器 -->
+    <div>
+        <div>哈哈</div>
+        <div class="box2">嘻嘻</div>
+    </div>
+
+</body>
+</html>
+<!-- 
+    选择器就是用来选择标签的,选出来以后给标签添加样式
+
+    选择器的种类
+        标签选择器  类选择器    层级选择器(后代选择器)
+        id选择器    组选择器    伪类选择器
+    
+    标签选择器
+        根据标签来选择标签  以标签开头  范围大,用来做通用设置
+
+        示例代码
+            <style type="text/css">
+                p{
+                    color: red;
+                }
+            </style>
+        
+            <p>hello</p>
+    类选择器
+        根据类名来选择标签  以.开头   一个类选择器可以应用与多个标签
+        一个标签也可以用多个类选择器. 多个类选择器需要使用空格分隔,应用灵活,
+        可复用,是css中应用最多的选择器
+
+        示例代码
+            <style type="text/css">
+                .blue{color: blue}
+                .big{font-size: 20px}
+                .box{width: 100px;height100px;background: glod}
+            </style>
+            
+            <div class="blue">这是一个div</div>
+            <h3 class="blue big box">这是一个h3标题</h3>
+
+    层级选择器
+            根据层级关系选择后代标签, 以选择器1 选择器2开头 主要应用于标签嵌套的结构中,减少命名.
+
+            示例代码
+            <style type="text/css">
+                div p{
+                    color: red;
+                }
+                .con{width:300px;height:80px;background:green}
+                .con span{color: red}
+                .con .pink{color: pink}
+                .con .gold{color: gold}
+            </style>
+
+            <div>
+                <p>hello</p>
+            </div>
+
+            <div class="con">
+                <span>哈哈</span>
+                <a href="#" class="pink">百度</a>
+                <a href="#" class="gold">百度</a>
+            </div>
+            <span>你好</span>
+            <a href="#" class="pink">新浪</a>
+ -->
+

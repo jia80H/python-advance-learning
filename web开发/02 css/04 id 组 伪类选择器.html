@@ -1,0 +1,77 @@
+<!-- 
+id选择器
+    根据id选择标签 以#开头 元素id名称不能重复,所以id选择器只能对应页面上的一个元素,不能复用
+    id名一般是给程序使用, 不推荐使用id作为选择器
+
+    示例代码
+    <style type="text/css">
+        #box{color: red}
+    </style>
+
+    <p id="box">这是一个段落标签</p>
+    <p>其他标签不能使用同一个id</p>
+
+    虽然给其他标签市长id="box"也可以设置样式,但是不推荐,
+    因为id是唯一的,以后js通过id只能获取一个唯一的标签对象
+
+组选择器
+    根据组合的选择器选择不同的标签 以,分隔 如果有公共的样式设置,可以使用组选择器
+
+    示例代码
+    <style type="text/css">
+        .box1,.box2,.box3{width:100px;height:100px}
+        .box1{background: red}
+        .box2{background: pink}
+        .box3{background: gold}
+    </style>
+
+    <div class="box1">这是第一个div</div>
+    <div class="box2">这是第二个div</div>
+    <div class="box3">这是第三个div</div>
+
+伪类选择器
+    用于向选择器添加特殊效果 以:分隔 当用户和网站交互时改变显示效果时
+    可以使用伪类选择器
+
+    示例代码
+    <style>
+        .b1{width:100px;height:100px;background: gold;}
+        .b1:hover{width: 300px;}
+    </style>
+
+    <div class="b1">鼠标悬停</div>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id选择器 */
+        #myid1{color:red}
+        /* 组选择器 */
+        .box1,.box2,.box3{width:100px;height:100px}
+        /* 后边出现同样的选择器,会追加,不会覆盖 */
+        .box1{background: red}
+        .box2{background: pink}
+        .box3{background: gold}
+        /* 伪类选择器 */
+        .b1{width:100px;height:100px;background:seagreen;}
+        .b1:hover{color:saddlebrown;}
+    </style>
+</head>
+<body>
+    <!-- id选择器 -->
+    <p id="myid1">这是一个段落标签</p>
+    <p>其他标签不能使用同一个id</p>
+    <!-- 组选择器 -->
+    <!-- 快捷方法: div.box*3 -->
+    <div class="box1">这是第一个div</div>
+    <div class="box2">这是第二个div</div>
+    <div class="box3">这是第三个div</div>
+    <!-- 伪类选择器 -->
+    <p class="b1">鼠标悬停</p>
+</body>
+</html>
