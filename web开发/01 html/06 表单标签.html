@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 吧数据提交给web服务器需要使用表单: <form> -->
+    <form>
+        <!-- for 根据id名给指定id的标签设置光标 -->
+        <label for="uid">用户名:</label><input type="text" id="uid">
+        <br>
+        <label for="pwd">密码:</label><input type="password" id="pwd">
+        <br>
+        <label>性别:</label>
+        <input type="radio">男
+        <input type="radio">女
+        <br>
+        <label>爱好</label>
+        <input type="checkbox">唱
+        <input type="checkbox">跳
+        <input type="checkbox">rap
+        <input type="checkbox">篮球
+        <br>
+        <label>照片</label>
+        <input type="file">
+        <br>
+        <label for="area">籍贯</label>
+        <select>
+            <option value="">北京</option>
+            <option value="">上海</option>
+            <option value="">深圳</option>
+            <option value="">广州</option>
+        </select>
+        <br>
+        <label for="desc">个人描述</label><br>
+        <textarea name="" id="desc" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        <input type="button" value="按钮">
+    </form>
+</body>
+</html>
+<!-- 
+    <form>: 表示表单标签,定义整体表单区域
+    <label>: 表示表单元素的文字标注,定义文字标注
+    <input>: 表示表单元素的用户输入标签,定义不同类型的用户输入数据方式
+        type属性:
+            type="text"     定义单行文本输入框
+            type="password"     定义密码输入框
+            type="radio"    定义单选框
+            type="checkbox"     定义复选框
+            type="file"     定义上传文件
+            type="submit"   定义提交按钮
+            type="reset"    定义重置按钮
+            type="buttom"   定义一个普通按钮
+    <textarea>: 表示表单元素输入框标签 定义段工行文本输入框
+    <select>: 表示表单元素的下拉列表标签, 定义下拉列表
+        <option>与<select>配合定义下拉列表的选项
+ -->

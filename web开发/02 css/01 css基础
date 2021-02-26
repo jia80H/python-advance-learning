@@ -1,0 +1,48 @@
+基本语法
+    选择器{
+        样式规则
+    }
+
+    样式规则：
+    属性名1: 属性值1;
+    属性名2: 属性值2;
+    属性名3: 属性值3;
+    ....
+
+    选择器是用来选择标签的,选出以后给标签添加样式
+
+    代码实例:
+        div{
+            width: 100px;
+            height: 100px;
+            background: gold;
+        }
+
+引入方式
+    行内式
+        <div style="width:100px; height:100px; background: gold">hello</div>
+        方便直观 但是 缺乏可重用性
+
+    内嵌式
+        在<head>标签内加入<style>标签,
+        在<style>标签中重写css代码
+        
+        示例代码
+        <head>
+            <style type="text/css">
+                h3{
+                    width: 100px;
+                    height: 100px;
+                    background: gold;
+                }
+            </style>
+        </head>
+        在同一个页面内便于复用和维护
+        在多个页面之间可重用性不够高
+    
+    外链式
+        将css代码写在一个单独的.css文件里,
+        在<head>标签中使用<link>标签直接引入改文件到页面中
+
+        示例代码
+        <link rel="stylesheet" atype="text/css" href="css/main/css">

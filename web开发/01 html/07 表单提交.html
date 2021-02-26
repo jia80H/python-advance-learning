@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.baidu.com" method="GET">
+        <!-- for 根据id名给指定id的标签设置光标 -->
+        <label for="uid">用户名:</label>
+        <input type="text" id="uid" name="username">
+        <br>
+        <label for="pwd">密码:</label>
+        <input type="password" id="pwd" name="password">
+        <br>
+        <label>性别:</label>
+        <input type="radio" name="gender" value="0">男
+        <input type="radio" name="gender" value="1">女
+        <br>
+        <label>爱好</label>
+        <input type="checkbox" name="like" value="sing">唱
+        <input type="checkbox"name="like" value="dance">跳
+        <input type="checkbox"name="like" value="rap">rap
+        <input type="checkbox"name="like" value="basketball">篮球
+        <br>
+        <label>照片</label>
+        <input type="file" name="person_pic">
+        <br>
+        <label for="area">籍贯</label>
+        <select name="sity">
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">深圳</option>
+            <option value="4">广州</option>
+        </select>
+        <br>
+        <label for="desc">个人描述</label><br>
+        <textarea name="about" id="desc" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+        <input type="button" value="按钮">
+    </form>
+
+</body>
+</html>
+<!-- 
+    表单属性设置
+        <form>标签 表示表单标签,定义整体的表单区域
+            action属性: 设置表单数据提交地址
+            method属性: 设置表单提交方式,一般有 get 和 post 方式
+    表单元素属性设置
+        name属性 设置表单元素的名称,该名称时提交数据时的参数
+        value属性 设置表单元素的值,该值时提交数据时参数名对应的值
+ -->
+ <!-- 
+    username: 蔡徐坤
+    password: 123
+    gender: 0
+    like: sing
+    like: dance
+    like: rap
+    like: basketball
+    person_pic: 
+    sity: 2
+    about: 鸡你很美
+  -->
