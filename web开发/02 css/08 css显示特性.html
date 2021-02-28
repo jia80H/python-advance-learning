@@ -1,0 +1,45 @@
+<!-- 
+    display属性的使用
+        display属性是用来设置元素的类型以及隐藏的,常用属性有:
+            none 元素隐藏且不占位置
+            inline 元素以行内元素显示
+            block 元素以块元素显示
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: cadetblue;
+            /* 把标签隐藏且不占用位置 */
+            display: none;
+        }
+        .box2{
+            /* width: 100px; */
+            /* height: 100px; */
+            background: red;
+            /* 设置div可以与其他元素在一行显示,大拿不能设置宽高 */
+            /* 既设置div的宽高又设置在一行显示可以通过浮动来完成 */
+            display: inline;
+            /* 提示: 标签再次显示可以设置为block,或者删除display这个样式属性 */
+        }
+
+        a{
+            /* 设置标签自己独占一i行,不与其他标签在一行显示 */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">哈哈</div>
+    <p>嘻嘻嘻</p>
+    <div class="box2">哈哈哈</div>
+    <a href="#">神秘链接</a>
+</body>
+</html>
