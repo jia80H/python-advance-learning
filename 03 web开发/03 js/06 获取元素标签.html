@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 可以使用内置对象 document 上的 getElementById 方法来获取页面上设置id属性的标签元素,
+        // 获取到的是一个html对象, 然后给他赋值给一个变量
+        var oDiv = document.getElementById('div1');
+        alert(oDiv);
+
+        /* 解决方法2 */
+        function onLoad() {
+            var oDiv1 = document.getElementById('div2');
+            alert(oDiv1);
+        }
+        // 页面加载完成以后会触发onload事件
+        window.onload = onLoad;
+    </script>
+</head>
+
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <!-- 说明: -->
+    <!-- 上面的代码﹐如果把javascript写在元素的上面﹐就会出错﹐ -->
+    <!-- 因为页面上从上往下加载执行的﹐ javascript去页面上获取元素div1的时候﹐ -->
+    <!-- 元素div1还没有加载。 -->
+
+</body>
+
+</html>
+<!-- 解决方法 -->
+<!-- 1. 将js放到页面最下方(不推荐) -->
+<!-- 2. 设置页面加载完成执行的函数,在执行函数里获取标签元素 -->

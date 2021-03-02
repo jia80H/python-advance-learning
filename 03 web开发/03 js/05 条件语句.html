@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        if 语句–只有当指定条件为true 时﹐使用该语句来执行代码
+        if...else语句-当条件为true时执行代码﹐当条件为false 时执行其他代码
+        if...else if....else语句–使用该语句来判断多条件﹐执行条件成立的语句
+     -->
+    <!-- 
+        比较运算符
+        ==      ===     !=      >       <       >=        <=
+        等于    全等    不等    大于    小于    大于等于  小于等于
+
+        5 == "5"  true
+        5 === "5" false
+     -->
+    <!-- 
+         逻辑运算符
+         &&     ||      ！
+         and    or     not
+      -->
+    <script>
+        var iNum1 = 1;
+        var iNum2 = 2;
+
+        if (iNum1 > 0 && iNum2 < 2) {
+            alert("条件成立");
+        } else {
+            alert("条件不成立");
+        }
+
+        /* 这是下节的匿名函数测试 */
+        window.onload = function () {
+            var oP = document.getElementById("p1");
+            alert(oP);
+        }
+
+    </script>
+</head>
+
+<body>
+    <p id="p1">我是p1</p>
+</body>
+
+</html>

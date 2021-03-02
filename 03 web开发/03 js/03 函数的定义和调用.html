@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 函数就是可以重复使用的代码块，使用关键字 function 定义函数
+        function fnAlert(){
+            alert('hello');
+        }
+
+        // 执行函数 函数名加小括号, 函数名(参数[参数可选])
+        fnAlert();
+
+        // 定义有参数有返回值的函数是
+        function fnAdd(iNum01,iNum02) {
+            var iRs = iNum01 + iNum02;
+            return iRs; // return执行完,函数执行结束
+            alert('here');
+        }
+
+        var iCount = fnAdd(3,4);
+        alert(iCount);   //弹出7 而不是here
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

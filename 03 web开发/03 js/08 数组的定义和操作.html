@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 数组就是一组数据的集合,类似列表 -->
+    <script>
+        /* 数组的定义 */
+        // 实例化对象方法创建
+        var aList = new Array(1, 2, 3);
+        // 字面量方法创建(推荐)
+        var aList2 = [1, 2, 3, 'sad'];
+
+        /* 多维数组 */
+        // 多维数组就是数组里还有数组
+        var aList3 = [[1, 2, 3], ['a', 'b', 'c']]
+
+        /* 数组的操作 */
+        // 1. 获取数组的长度
+        alert(aList.length)
+        // 2. 根据下标获取值
+        alert(aList3[0][1])
+        // 3. 添加删除数据
+        aList.push(5);  // 添加5
+        aList.pop(1);  // 删除1
+        alert(aList);
+        // 4. 根据下标添加删除元素
+        // arr.splice(start,num,element,....,elementN)
+        /*  参数解析
+                1. sta: 必须,开始删除的索引
+                2. num: 可选, 删除数组元素的个数
+                3. element: 可选,在start索引位置要插入的新元素
+            此方法会删除从start索引开始的num个元素,并将element参数插入到start索引位置
+         */
+        var aColors = ['red', 'green', 'blue'];
+        aColors.splice(0, 1); // 删除第一项
+        alert(aColors);
+
+        aColors.splice(1,0,"yellow", "green"); // 从第一个索引插入两个新数据
+        alert(aColors);
+
+        aColors.splice(1,1,"red", "purple"); // 删除一项,插入两项
+        alert(aColors);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

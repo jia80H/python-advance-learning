@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 定义变量的语法 */
+        // var 变量名 = 值;
+        var num = 123;
+        var str = 'ask';
+        // 痛啊定义多个变量可以用","隔开,共用一个'var'关键字
+        var num2 = 45, str2 = 'qua';
+
+
+        /* 我是多行注释 */
+        // 我是单行注释
+
+
+        // js中有六种数据类型﹐包括五种基本数据类型和一种复杂数据类型(object)
+        // 5种基本数据类型︰
+        // 1 number 数字类型
+        // 2 string 字符串类型
+        // 3  boolean 布尔类型 true 或 false
+        // 4 undefined undefined类型﹐变量声明未初始化﹐它的值就是undefined
+        // 5 null null类型﹐表示空对象﹐如果定义的变量将来准备保存对象﹐可以将变量初始化为null,在页面上获取不到对象﹐返回的值就是null
+
+        // 一种复合类型
+        // 1 object后面学习的JavaScript对象属于复合类型
+
+        var num3 = 10.1;
+        var str3 = 'hhhh';
+        var bool = false;
+        var unData;
+        var NullData = null;
+        // 由于js历史原因,设计之前没有null类型,null值归属于object类型,后续也没有修改
+        // 但是类型null值属于null类型
+
+        var obj = {
+            name: "jarry",
+            age: 18
+        }
+
+        // 获取变量类型
+        var type = typeof(obj);
+        alert(type);
+        // 获取对象的name属性
+        alert(obj.name);
+
+        // 输出到控制台
+        console.log(obj.name)
+
+
+        /* 变量命名规范 */
+        // 1·区分大小写
+        // 2·第一个字符必须是字母﹑下划线(_)或者美元符号($)
+        // 3·其他字符可以是字母·下划线·美元符或数字
+
+        // 5.匈牙利命名风格
+        // 对象o Object 比如: oDiv
+        // 数组a Array 比如︰aItems
+        // 字符串s String 比如: sUserName
+        // 整数i lnteger 比如∶iltemCount
+        // 布尔值b Boolean 比如:bIsComplete
+        // 浮点数f Float比如∶fPrice
+        // 函数fn Function 比如∶fnHandler
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
