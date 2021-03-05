@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 定时器 */
+        // js定时器创建方法
+            // 1. setTimeout(func,delay,param1,param2,....): 以指定的时间间隔(毫米计)调用一次函数
+            // 2. setInterval(func,delay,param1,param2,....): 以指定的时间间隔(毫米计)重复调用函数
+                /* 参数介绍
+                    1. func, 表示定时器要执行的函数名
+                    2. delay, 表示时间间隔, 默认为0
+                    3. param,表示定时器执行函数的参数
+                 */
+        
+        // 定时调用
+        function fnShow(name,age) {
+            alert("ok "+name+age)
+
+            // 返回值表示创建定时器返回的id, 通俗理解就是第几个定时器
+            alert(tid);
+            // 销毁定时器
+            clearTimeout(tid);
+        }
+        tid = setTimeout(fnShow, 1000,'lisi ',20);
+
+        // 重复调用
+        function fnShowInfo(name, age) {
+            alert("ok "+name+age)
+        }
+
+        function fnStop() {
+            alert(tid2);
+            clearInterval(tid2);
+        }
+
+        tid2 = setInterval(fnShowInfo,3000,'lisi ',18);
+
+    </script>
+</head>
+<body>
+    <!-- 停止重复调用 -->
+    <input type="button" value="停止" onclick="fnStop();">
+</body>
+</html>
